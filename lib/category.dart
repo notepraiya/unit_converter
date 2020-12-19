@@ -18,9 +18,37 @@ class Category extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: color,
-      child: Text(title),
+    return Material(
+      color: Colors.transparent,
+      child: Container(
+        height: 100.0,
+        padding: EdgeInsets.all(8.0),
+        child: InkWell(
+          highlightColor: color,
+          splashColor: color,
+          borderRadius: BorderRadius.circular(100.0 / 2),
+          onTap: () => print('test'),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Icon(
+                  icon,
+                  size: 60.0,
+                ),
+              ),
+              Center(
+                child: Text(
+                  title,
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.headline5,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

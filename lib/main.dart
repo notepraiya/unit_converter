@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:unit_converter/category.dart';
+import 'package:unit_converter/screen_category.dart';
 
 void main() {
   runApp(App());
@@ -13,13 +13,18 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: title,
       home: Scaffold(
-        body: Center(
-          child: Category(
-            title: 'Hello',
-            color: Colors.amber,
-            icon: Icons.cake,
+        appBar: AppBar(
+          elevation: 0.0,
+          backgroundColor: Colors.lightBlue,
+          centerTitle: true,
+          title: Text(
+            title,
+            style: TextStyle(
+              fontSize: 24.0,
+            ),
           ),
         ),
+        body: ScreenCategory(),
       ),
     );
   }
