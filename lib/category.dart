@@ -5,16 +5,16 @@ import 'unit.dart';
 class Category {
   final String name;
   final ColorSwatch color;
-  final IconData icon;
+  final String iconLocation;
   final List<Unit> units;
 
   const Category({
     @required this.name,
     @required this.color,
-    @required this.icon,
+    @required this.iconLocation,
     @required this.units,
   })  : assert(name != null),
         assert(color != null),
-        assert(icon != null),
+        assert(iconLocation != null),
         assert(units != null);
 }
